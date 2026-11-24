@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoPin Studio — Coordinate Route & Haversine Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <h1>GeoPin Route Studio</h1>
+        <p>Coordinate Plotter, Haversine Distance Calculator & GeoJSON Exporter</p>
+      </div>
+      <button class="btn" id="exportGeoBtn">Download GeoJSON</button>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Waypoints (Name, Lat, Lon)</h2>
+        <textarea id="coordInput" rows="10">CyberHub Gurugram, 28.4950, 77.0895
+MG Road Metro, 28.4796, 77.0801
+Leisure Valley Park, 28.4682, 77.0689
+Sohna Road Hub, 28.4189, 77.0412</textarea>
+        <button class="btn primary" id="plotBtn">Plot Route & Calculate</button>
+        <div id="stats" class="stats"></div>
+      </section>
+
+      <section class="card">
+        <h2>Interactive SVG Route Canvas</h2>
+        <svg id="mapSvg" viewBox="0 0 600 380"></svg>
+        <div id="legTable"></div>
+      </section>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
